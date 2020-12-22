@@ -20,3 +20,15 @@ after_success:
   - docker push azeemz/multi-nginx
   - docker push azeemz/multi-server
   - docker push azeemz/multi-worker
+# deploy:
+#   provider: elasticbeanstalk
+#   region: us-west-1
+#   app: multi-container-app
+#   env: MultiContainerApp-env
+#   bucket_name: multi-container-app
+#   bucket_path: elasticbeanstalk-us-west-1-3843827483
+#   on:
+#     branch: master
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key:
+#     secure: "$AWS_SECRET_KEY"
